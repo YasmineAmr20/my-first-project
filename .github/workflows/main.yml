@@ -18,11 +18,8 @@
       runs-on: ubuntu-latest
 
       steps:
-        - name: 'print file data before'
-          run: ls
-
 
         - uses: actions/checkout@v3
 
-        - name: 'print file data after'
-          run: ls
+        - name: 'Login to Docker Hub'
+          run: docker login --username ${{ secrets.DOCKER_USERNAME}} --password ${{ secrets.DOCKER_PASS}}
