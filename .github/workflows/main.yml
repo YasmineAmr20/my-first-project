@@ -18,9 +18,8 @@
       runs-on: ubuntu-latest
 
       steps:
-        - name: 'Testing Github action'
-          run: pwd
+        - name: 'print file data'
+          run: ls
 
 
-        - name: 'Testing Printing'
-          run: echo 'Yasmeen'
+        - uses: actions/checkout@v3
