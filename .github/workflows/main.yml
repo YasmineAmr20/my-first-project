@@ -18,8 +18,11 @@
       runs-on: ubuntu-latest
 
       steps:
-        - name: 'print file data'
+        - name: 'print file data before'
           run: ls
 
 
         - uses: actions/checkout@v3
+
+        - name: 'print file data after'
+          run: ls
