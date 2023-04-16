@@ -1,9 +1,7 @@
-FROM openjdk:11
-
-COPY . /usr/src/myapp
-
-WORKDIR /usr/src/myapp
-
-RUN javac Yasmeen.java
-
-CMD ["java", "Yasmeen"]
+FROM node
+WORKDIR /user/app
+COPY  package.json .
+RUN npm install
+COPY  . .
+EXPOSE 2020
+CMD ["node","index.js"]
